@@ -15,3 +15,12 @@ Você pode visualizar o projeto online no GitHub Pages:
 
 ## Estrutura do Repositório
 
+`projeto-xml/`
+
+├── `docs/`
+
+│   ├── `index.html`       **Página principal do projeto**
+
+│   ├── `catalog.xml`      **Arquivo XML com os dados**
+
+├── `README.md`            **Arquivo de descrição do projeto**
