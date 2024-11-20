@@ -24,3 +24,11 @@ Você pode visualizar o projeto online no GitHub Pages:
 │   ├── `catalog.xml`      **Arquivo XML com os dados**
 
 ├── `README.md`            **Arquivo de descrição do projeto**
+
+
+
+## Como Contribuir
+
+1. Faça um fork deste repositório.
+2. Crie uma branch para suas alterações (`git checkout -b minha-branch`).
+3. Envie um pull request com as melhorias.
