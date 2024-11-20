@@ -1,1 +1,33 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+    <book>
+        <title>Aprendizado de Máquina</title>
+        <author>Antônio Nascimento</author>
+        <year>2024</year>
+        <price>59.90</price>
+    </book>
+    <book>
+        <title>Programação em Java</title>
+        <author>Maria Oliveira</author>
+        <year>2020</year>
+        <price>39.90</price>
+    </book>
+    <book>
+        <title>Introdução ao Python</title>
+        <author>João Pereira</author>
+        <year>2018</year>
+        <price>49.90</price>
+    </book>
+    <book>
+        <title>Desenvolvimento Web com JavaScript</title>
+        <author>Carla Souza</author>
+        <year>2021</year>
+        <price>45.00</price>
+    </book>
+    <book>
+        <title>Fundamentos de Redes de Computadores</title>
+        <author>Lucas Almeida</author>
+        <year>2019</year>
+        <price>69.90</price>
+    </book>
+</catalog>
