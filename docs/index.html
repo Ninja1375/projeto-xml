@@ -1,1 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Livros</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
 
+        /* Estilo do catálogo */
+        #catalog {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .book {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .book:last-child {
+            border-bottom: none;
+        }
+        .book h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #4CAF50;
+        }
+        .book p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Livros</h1>
+    </header>
+    <main>
+        <div id="catalog">
+            <p>Carregando catálogo...</p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Catálogo de Livros. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Caminho do arquivo XML
+        const xmlPath = './catalog.xml';
+
+        // Função para carregar e exibir o XML
+        fetch(xmlPath)
+            .then(response => response.text())
+            .then(data => {
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(data, "text/xml");
+                const books = xmlDoc.getElementsByTagName("book");
+                const catalogDiv = document.getElementById("catalog");
+
+                // Limpa mensagem de carregamento
+                catalogDiv.innerHTML = "";
+
+                // Exibe cada livro no HTML
+                Array.from(books).forEach(book => {
+                    const title = book.getElementsByTagName("title")[0].textContent;
+                    const author = book.getElementsByTagName("author")[0].textContent;
+                    const year = book.getElementsByTagName("year")[0].textContent;
+                    const price = book.getElementsByTagName("price")[0].textContent;
+
+                    catalogDiv.innerHTML += `
+                        <div class="book">
+                            <h3>${title}</h3>
+                            <p><strong>Autor:</strong> ${author}</p>
+                            <p><strong>Ano:</strong> ${year}</p>
+                            <p><strong>Preço:</strong> R$ ${price}</p>
+                        </div>
+                    `;
+                });
+            })
+            .catch(err => {
+                const catalogDiv = document.getElementById("catalog");
+                catalogDiv.innerHTML = "<p>Erro ao carregar o catálogo. Tente novamente mais tarde.</p>";
+                console.error(err);
+            });
+    </script>
+</body>
+</html>
