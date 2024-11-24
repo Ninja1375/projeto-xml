@@ -29,8 +29,7 @@ Você pode visualizar o projeto online no GitHub Pages:
 
 <a href="https://programartudo.blogspot.com/2024/11/html-tudo-o-que-precisa-para-comecar.html" target="_blank">
     <img loading="lazy" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="40" alt="HTML Icon"/>
-</a> 
-<a href="https://programartudo.blogspot.com/2024/11/xml-estrutura-e-aplicacoes-essenciais.html" target="_blank">
+</a><a href="https://programartudo.blogspot.com/2024/11/xml-estrutura-e-aplicacoes-essenciais.html" target="_blank">
     <img loading="lazy" src="https://img.icons8.com/color/48/000000/xml-file.png" width="40" height="40" alt="XML Icon"/>
 </a>
 
